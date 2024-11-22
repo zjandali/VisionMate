@@ -4,10 +4,7 @@
 VisionMate is an innovative web application designed to help individuals with visual impairments explore and navigate new places with confidence. Through natural conversation and real-time location awareness, VisionMate provides detailed descriptions of surroundings and helps users discover new destinations.
 
 ## 🎥 Demo Video
-<video width="600" height="400" controls>
-  <source src="vid.mp4" type="video/mp4">
-</video>
-
+[Whats built so far](https://www.youtube.com/watch?v=wofinWr1Rkk&ab_channel=Josh) 
 
 ## ✨ Key Features
 
