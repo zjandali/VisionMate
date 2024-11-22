@@ -5,7 +5,7 @@ VisionMate is an innovative web application designed to help individuals with vi
 
 ## 🎥 Demo Video
 <video width="600" height="400" controls>
-  <source src="VisionMate Final Video .mp4" type="video/mp4">
+  <source src="vid.mp4" type="video/mp4">
 </video>
 
 
