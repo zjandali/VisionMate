@@ -1,0 +1,42 @@
+<!-- public/liverecommendation2.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Recommendation Chat Page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/live_rec.js" defer></script>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="mainmenuContainer">
+        <div class="subMenuContainer">
+          <p class="projectBig">Live Recommendation</p>
+          <div id="chatMessages">
+            <div class="chatResponse" aria-live="polite" tabindex="-1">
+              <p>Hi! welcome to live recommendation mode, feel free to speak and let me know if you want to hear less about certain kinds of places, or lessen the frequency of my messages!</p>
+            </div>
+          </div>
+          <div id="userMessages"></div>
+          <button aria-live="polite" tabindex="-1" class="voiceSearchButton" id="recordButton">Tap to speak to our app!</button>
+          <div id="memos"></div>
+        </div>
+      </div>
+      <div class="homeRow">
+        <a href="javascript:window.history.back();" class="buttonContainer" onclick="clearStoredData()">
+          <img class="imageContainer" src="leftarrow.png" alt="Back to previous page" />
+        </a>
+        <div class="buttonContainer">
+          <a href="newMenu.html" class="subButtontext" onclick="clearStoredData()">Return to Home Page</a>
+        </div>
+      </div>
+    </main>
+    <script>
+      // Additional JavaScript can be added here if needed
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!-- public/viewallmemos.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All Memos</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+      /* Additional styles specific to this page can go here */
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="mainmenuContainer">
+        <div class="subMenuContainer">
+          <p class="projectBig">Now Showing All Memos</p>
+          <p>Scroll to View Options</p>
+          <div class="voiceSearchButton" id="searchButton">
+            <p>Tap to search for a specific voice memo</p>
+          </div>
+          <div class="voiceSearchButton" id="speakButton">
+            <p>Listening, describe your memo and we will find it for you! Tap when finished.</p>
+          </div>
+          <div class="voiceSearchButton" id="thinkingButton">
+            <p>Understood. Searching...</p>
+          </div>
+          <p>All memos listed below:</p>
+          <div class="memoListing">
+            <div class="memo">
+              <p>Big Branch</p>
+              <p>Nov 22, 2021</p>
+              <p>Adeline St</p>
+              <img class="imageContainer" src="playbutton.png" alt="Play Memo" />
+              <img class="imageContainer" src="sharebutton.png" alt="Share Memo" />
+              <img class="imageContainer" src="deletebutton.png" alt="Delete Memo" />
+            </div>
+            <!-- Repeat memoDivs as needed -->
+          </div>
+        </div>
+      </div>
+      <div class="homeRow">
+        <a href="javascript:window.history.back();" class="buttonContainer">
+          <img class="imageContainer" src="leftarrow.png" alt="Back to previous page" />
+        </a>
+        <div class="buttonContainer">
+          <a href="newMenu.html" class="subButtontext">Return to Home Page</a>
+        </div>
+      </div>
+    </main>
+    <script src="js/liveRecommendation.js"></script>
+    <script>
+      setTimeout(function() {
+        document.getElementById('searchButton').style.display = 'inline-flex';
+        document.getElementById('thinkingButton').style.display = 'none';
+      }, 5000);
+    </script>
+  </body>
+</html>

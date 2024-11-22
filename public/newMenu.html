@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisionMate Home Page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      body {
+            color: #000;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem; /* Use rem for font size */
+            margin: 0;
+            padding: 0;
+        }
+
+    .subText {
+            color: rgba(0, 0, 0, 0.73);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem; /* 14px equivalent */
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    
+    .mainButtontext {
+        color: #000;
+        font-family: 'Inter', sans-serif;;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .subButtontext {
+        color: #000;
+        font-family: 'Inter', sans-serif;;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .projectBig {
+        color: #000;
+        font-family: 'Inter';
+        font-size: 1.875rem; /* 30px equivalent */
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-top: 0;
+        margin-top: 0.2rem;
+    }
+
+
+    .projectEh {
+            color: #000;
+            font-size: 0.875rem; /* 14px equivalent */
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .allContainer {
+            display: flex;
+            margin: auto;
+            width: 90%; /* Use percentage for width */
+            max-width: 327px; /* Max width for larger screens */
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .mainmenuContainer {
+            display: flex;
+            height: 80vh;
+            align-items: flex-start;    
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 4rem; /* Adjust this value to move the container lower */
+            padding-left: 2rem;
+        }
+
+        .imageContainer {
+            margin-bottom: 2rem;
+        }
+
+        .projectContainer {
+        border-radius: 12px;
+        background: #FFE36E;
+        display: flex;
+        width: 327px;
+        height: 246px;
+        padding: 46px 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        flex-shrink: 0;
+      }
+
+        .buttonContainer {
+            display: inline-flex;
+            padding:1rem 3rem;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            border-radius: 4rem;
+            background: #FEDC70;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (min-width: 600px) {
+            .allContainer {
+                max-width: 600px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .allContainer {
+                max-width: 768px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .allContainer {
+                max-width: 1024px;
+            }
+        }
+
+      a:link {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .subMenuContainer {
+        max-width: 90%;
+        width: auto; /* Convert width to rem */
+      } 
+
+      .subMenuContainer p {
+          margin-bottom: 0.5rem; /* Reduce spacing between paragraphs */
+      }
+
+      .subMenuContainer p:first-of-type {
+    margin-bottom: 0.1rem; /* Further reduce spacing after the first paragraph */
+}
+
+
+      
+
+      .textContainer {
+        max-width: 80%; /* Adjust the width as needed */
+        margin: 0 auto; /* Center the container */
+        padding: 1rem; /* Add padding for spacing */
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+      }
+
+    </style>
+
+    <!-- Modify this CSS to style your interface -->
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body style="background-color: #FFFDE7;">
+    <!-- Add your HTML code here (please feel free to remove any/all of this starter code) ! -->
+    <header>
+    </header>
+    <main>
+      <div class="mainmenuContainer" role="main">
+        <p class="projectBig" role="heading" aria-level="1">Choose Mode!</p>
+        <div class="subMenuContainer" role="region" aria-label="Available Modes">
+          <p class="projectBig" role="heading" aria-level="2">Find a place to go!</p>
+          <p>Find a new place by talking to our app about what you're looking for! This will also open GPS to help you get there!</p>
+          <div class="buttonContainer">
+            <a id="findPlaceLink" href="findaplacetogo.html" class="subButtontext" role="button" aria-label="Open find a place to go">open find a place to go</a>
+          </div>
+        </div>
+        
+        <div class="subMenuContainer">
+          <p class="projectBig" role="heading" aria-level="2">Live Recommendation</p>
+          <p>As you are walking, you will be given a short description of notable places as you walk by!</p>
+          <div class="buttonContainer">
+            <a href="liverecommendation.html" class="subButtontext" role="button" aria-label="Start live recommendation">start live recommendation</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      // Initialize speech recognition
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const recognition = new SpeechRecognition();
+
+      // Configure recognition settings
+      recognition.continuous = true;
+      recognition.lang = 'en-US';
+
+      // Start speech recognition
+      recognition.start();
+
+      // Process speech results
+      recognition.onresult = function (event) {
+          const last = event.results.length - 1;
+          const command = event.results[last][0].transcript.toLowerCase().trim();
+
+          // Check the command and perform actions
+          if (command.includes('find a place to go')) {
+              document.getElementById('findPlaceLink').click();
+          } else if (command.includes('live recommendation')) {
+              document.getElementById('liveRecommendationLink').click();
+          } else if (command.includes('voice memo')) {
+              document.getElementById('futureVoiceMemoLink').click();
+          } else {
+              console.log(`Unrecognized command: ${command}`);
+          }
+      };
+
+      // Handle errors
+      recognition.onerror = function (event) {
+          console.log(event.error);
+          console.error('Speech recognition error:', event.error);
+      };
+  </script>
+  </body>
+</html>

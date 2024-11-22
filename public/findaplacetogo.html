@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Place to Go Intro Page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      body {
+            color: #000;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem; /* Use rem for font size */
+            margin: 0;
+            padding: 0;
+        }
+
+    .subText {
+            color: rgba(0, 0, 0, 0.73);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem; /* 14px equivalent */
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    
+    .mainButtontext {
+        color: #000;
+        font-family: 'Inter', sans-serif;;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .subButtontext {
+        display: inline-block;
+        color: #000;
+        font-family: 'Inter', sans-serif;;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        background: none;
+        border: none;
+    }
+
+    .projectBig {
+        color: #000;
+        font-family: 'Inter';
+        font-size: 1.875rem; /* 30px equivalent */
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-top: 0;
+        margin-top: 0.2rem;
+    }
+
+
+    .projectEh {
+            color: #000;
+            font-size: 0.875rem; /* 14px equivalent */
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .allContainer {
+            display: flex;
+            margin: auto;
+            width: 90%; /* Use percentage for width */
+            max-width: 327px; /* Max width for larger screens */
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .mainmenuContainer {
+            display: flex;
+            height: 80vh;
+            align-items: flex-start;    
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 1.25rem;
+            margin-top: 12rem; /* Adjust this value to move the container lower */
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .imageContainer {
+            margin-right: 0%;
+        }
+
+        .homeRow {
+            display: flex;
+            flex-direction: row;
+            gap: 4rem;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            position: absolute;
+            bottom: 1rem;
+        }
+
+        .projectContainer {
+        border-radius: 12px;
+        background: #FFE36E;
+        display: flex;
+        width: 327px;
+        height: 246px;
+        padding: 46px 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        flex-shrink: 0;
+      }
+
+        .buttonContainer {
+            display: inline-flex;
+            padding:1rem 2rem;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            border-radius: 4rem;
+            background: #FEDC70;
+        }
+
+        .buttonContainerEnd {
+            display: inline-flex;
+            padding:1rem 2rem;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            border-radius: 4rem;
+            background: #FEDC70;
+            align-self: flex-end;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (min-width: 600px) {
+            .allContainer {
+                max-width: 600px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .allContainer {
+                max-width: 768px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .allContainer {
+                max-width: 1024px;
+            }
+        }
+
+      a:link {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .subMenuContainer {
+        max-width: 90%;
+        width: auto; /* Convert width to rem */
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      } 
+
+      .subMenuContainer p {
+          margin-bottom: 0.5rem; /* Reduce spacing between paragraphs */
+      }
+
+      .subMenuContainer p:first-of-type {
+    margin-bottom: 0.1rem; /* Further reduce spacing after the first paragraph */
+}
+
+
+      
+
+      .textContainer {
+        max-width: 90%; /* Adjust the width as needed */
+        padding: 0rem; /* Add padding for spacing */
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+      }
+
+    </style>
+
+    <!-- Modify this CSS to style your interface -->
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body style="background-color: #FFFDE7;">
+    <!-- Add your HTML code here (please feel free to remove any/all of this starter code) ! -->
+    <header>
+    </header>
+    <main>
+      <div class = "mainmenuContainer">
+        <div class = "subMenuContainer">
+          <p class = "projectBig"> Find a place to go!</p>
+          <div class = "textContainer">
+          <p> This mode allows you to have a conversation with our app and get recommendations based on what you’re in the mood for! </p>
+        </div>
+          <br>
+        <div class ="buttonContainerEnd">
+            <a href="findaplacetogo2.html" class="subButtontext">start a conversation now</a>
+        </div>
+      </div>
+      </div>
+      <div class = "homeRow">
+      <a href="javascript:window.history.back();" class="buttonContainer">
+        <img class="imageContainer" src="leftarrow.png" alt="Back to previous page" />
+    </a>
+    <div class ="buttonContainer">
+      <a href="newMenu.html" class="subButtontext">Return to Home Page</a>
+  </div>
+</div>
+    </main>
+  </body>
+</html>

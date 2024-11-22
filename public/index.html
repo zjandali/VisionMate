@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction Page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      body {
+            color: #000;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem; /* Use rem for font size */
+            margin: 0;
+            padding: 0;
+        }
+
+    .subText {
+            color: rgba(0, 0, 0, 0.73);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem; /* 14px equivalent */
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    
+    .mainButtontext {
+        color: #000;
+        font-family: 'Inter', sans-serif;;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .projectBig {
+        color: #000;
+        font-family: 'Inter';
+        font-size: 1.875rem; /* 30px equivalent */
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+
+    .projectEh {
+            color: #000;
+            font-size: 0.875rem; /* 14px equivalent */
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .allContainer {
+            display: flex;
+            margin: auto;
+            width: 90%; /* Use percentage for width */
+            max-width: 327px; /* Max width for larger screens */
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .mainmenuContainer {
+            display: flex;
+            height: 65vh;
+            align-items: center;    
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 3.5rem; /* Adjust this value to move the container lower */
+        }
+
+        .imageContainer {
+            margin-bottom: 2rem;
+        }
+
+        .projectContainer {
+        border-radius: 12px;
+        background: #FFE36E;
+        display: flex;
+        width: 327px;
+        height: 246px;
+        padding: 46px 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        flex-shrink: 0;
+      }
+
+        .buttonContainer {
+            display: inline-flex;
+            padding:1rem 3rem;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            border-radius: 4rem;
+            background: #FEDC70;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (min-width: 600px) {
+            .allContainer {
+                max-width: 600px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .allContainer {
+                max-width: 768px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .allContainer {
+                max-width: 1024px;
+            }
+        }
+
+      a:link {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .headHeader {
+        position: fixed;
+        top: 5px;
+        left: 10px;
+        padding: 10px;
+        gap: 10px;
+      }
+
+      .learnBubble {
+        border-radius: 1.25rem;
+        background: #FFFBCF;
+        width: 75%; /* Convert width to rem */
+        height: auto;
+        flex-shrink: 0;
+        padding: 1rem;
+        position: fixed; /* Position the bubble absolutely */
+        top: 75%; /* Adjust as needed */
+        left: 50%; /* Adjust as needed */
+        transform: translate(-50%, -50%); /* Center the bubble */
+        background: #FFFBCF;
+        justify-content: flex-end;
+        flex-direction: column;
+        display: flex;
+        z-index: 1000;
+      }
+
+    </style>
+
+    <!-- Modify this CSS to style your interface -->
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body style="background-color: #FDC674;">
+    <!-- Add your HTML code here (please feel free to remove any/all of this starter code) ! -->
+    <header>
+    </header>
+    <main>
+      <div class = "mainmenuContainer">
+        <p class = "projectBig"> Welcome to VisionMate! </p>
+        <img class="imageContainer" aria-hidden="true" src="visionmatelogo.png" alt="Vision Mate logo" />
+        <div class ="buttonContainer">
+            <a href="newMenu.html" id="getStartedButton" class="mainButtontext">Get Started</a>
+        </div>
+        <p class ="subText" id="learnMore"> Learn More </p>
+        <div class="learnBubble" id="learnBubble">
+          <p id="learnBubbleText" tabindex="-1"> VisionMate is a program made to help individuals with blindness explore new places. Through a conversation with VisionMate, you learn more about the things surrounding you, whether before you leave the home, or while on the go.
+            <br>
+            <br>
+            We also offer a future voice memo feature, which allows you to note any hazards you find on your own.</p>
+            <div class ="buttonContainer"  id="beginNowButton">
+              <a href="newMenu.html" class="mainButtontext">Begin Now</a>
+            </div>
+      </div>
+    </main>
+   <script>
+        // Hide learn more bubble by default
+        document.getElementById('learnBubble').style.display = 'none';
+
+        // Toggle learn more bubble visibility
+        document.getElementById('learnMore').addEventListener('click', function () {
+          const bubble = document.getElementById('learnBubble');
+          const bubbleText = document.getElementById('learnBubbleText');
+        if (bubble.style.display === 'none') {
+            bubble.style.display = 'flex';
+            bubbleText.focus();
+        } else {
+            bubble.style.display = 'none';
+        }
+        document.getElementById('learnMore').setAttribute('aria-hidden', 'true');
+        });
+
+        // Initialize speech recognition
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        const recognition = new SpeechRecognition();
+
+        // Configure recognition settings
+        recognition.continuous = true;
+        recognition.lang = 'en-US';
+
+        // Start speech recognition
+        recognition.start();
+
+        // Process speech results
+        recognition.onresult = function (event) {
+            const last = event.results.length - 1;
+            const command = event.results[last][0].transcript.toLowerCase().trim();
+
+            // Check the command and perform actions
+            if (command.includes('get started')) {
+                document.getElementById('getStartedButton').click();
+            } else if (command.includes('learn more')) {
+                document.getElementById('learnMore').click();
+            } else if (command.includes('begin now')) {
+                document.getElementById('beginNowButton').click();
+            } else {
+                console.log(`Unrecognized command: ${command}`);
+            }
+        };
+
+        // Handle errors
+        recognition.onerror = function (event) {
+            console.error('Speech recognition error:', event.error);
+        };
+    </script>
+  </body>
+</html>

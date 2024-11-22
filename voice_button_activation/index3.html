@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation, Voice Memo, and Speech Recognition</title>
+</head>
+<body>
+    <h1>Geolocation, Voice Memo, and Speech Recognition</h1>
+    <button id="startTracking">Start Tracking</button>
+    <button id="stopTracking">Stop Tracking</button>
+    <button id="startRecording">Start Recording</button>
+    <button id="stopRecording">Stop Recording</button>
+
+    <div id="locationData"></div>
+    <audio id="audioPlayback" controls></audio>
+
+    <script>
+        // Initialize speech recognition
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        const recognition = new SpeechRecognition();
+
+        // Configure recognition settings
+        recognition.continuous = true;
+        recognition.lang = 'en-US';
+
+        // Start recognition
+        recognition.start();
+
+        // Process speech results
+        recognition.onresult = function(event) {
+            const last = event.results.length - 1;
+            const command = event.results[last][0].transcript.toLowerCase().trim();
+
+            // Get all buttons
+            const buttons = document.querySelectorAll('button');
+
+            // Check if spoken text matches any button
+            buttons.forEach(button => {
+                if (command === button.textContent.toLowerCase().trim()) {
+                    button.click();
+                }
+            });
+        };
+
+        // Handle errors
+        recognition.onerror = function(event) {
+            console.error('Speech recognition error:', event.error);
+        };
+
+        // Geolocation tracking
+        let watchId;
+        const locationData = document.getElementById('locationData');
+
+        function startTracking() {
+            if ('geolocation' in navigator) {
+                watchId = navigator.geolocation.watchPosition(
+                    (position) => {
+                        const { latitude, longitude } = position.coords;
+                        locationData.innerHTML = `Latitude: ${latitude}, Longitude: ${longitude}`;
+                    },
+                    (error) => {
+                        console.error('Error retrieving location:', error);
+                    },
+                    {
+                        enableHighAccuracy: true,
+                        timeout: 5000,
+                        maximumAge: 0
+                    }
+                );
+            } else {
+                alert('Geolocation is not supported by your browser.');
+            }
+        }
+
+        function stopTracking() {
+            if (watchId) {
+                navigator.geolocation.clearWatch(watchId);
+                locationData.innerHTML = 'Tracking stopped.';
+            }
+        }
+
+        document.getElementById('startTracking').addEventListener('click', startTracking);
+        document.getElementById('stopTracking').addEventListener('click', stopTracking);
+
+        // Voice recording
+        let mediaRecorder;
+        let audioChunks = [];
+
+        function startRecording() {
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ audio: true })
+                    .then((stream) => {
+                        mediaRecorder = new MediaRecorder(stream);
+                        mediaRecorder.start();
+
+                        mediaRecorder.ondataavailable = (event) => {
+                            audioChunks.push(event.data);
+                        };
+
+                        mediaRecorder.onstop = () => {
+                            const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                            const audioUrl = URL.createObjectURL(audioBlob);
+                            const audioPlayback = document.getElementById('audioPlayback');
+                            audioPlayback.src = audioUrl;
+                            audioChunks = [];  // Clear the audio chunks for the next recording
+                        };
+                    })
+                    .catch((error) => {
+                        console.error('Error accessing audio devices:', error);
+                    });
+            } else {
+                alert('Audio recording is not supported by your browser.');
+            }
+        }
+
+        function stopRecording() {
+            if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+                mediaRecorder.stop();
+            }
+        }
+
+        document.getElementById('startRecording').addEventListener('click', startRecording);
+        document.getElementById('stopRecording').addEventListener('click', stopRecording);
+    </script>
+</body>
+</html>

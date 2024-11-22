@@ -1,0 +1,17 @@
+project-root/
+├── server.js
+├── public/
+│   ├── css/
+│   │   └── main.css
+│   ├── js/
+│   │   ├── liveRecommendation.js
+│   │   ├── live_rec.js
+│   │   └── recommend.js
+│   ├── findaplacetogo.html
+│   ├── index.html
+│   ├── liverecommendation.html
+│   ├── liverecommendation2.html
+│   ├── mainmenu.html
+│   ├── newMenu.html
+│   ├── viewallmemos.html
+│   └── findaplacetogo2.html
