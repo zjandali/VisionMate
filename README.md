@@ -20,6 +20,7 @@ VisionMate is an innovative web application designed to help individuals with vi
 ## 🚀 Technologies Used
 
 - **Frontend**: HTML5, CSS3, JavaScript
+- **Backend**: Express
 - **Speech Recognition**: Web Speech API
 - **Location Services**: Geolocation API
 - **APIs**: 
