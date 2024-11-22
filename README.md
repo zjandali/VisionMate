@@ -81,10 +81,6 @@ npm install -g ngrok
 ngrok http 3000
 ```
 
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
 ## 🎯 Future Roadmap
 
 - [ ] Offline mode support
@@ -100,14 +96,8 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 - Yelp for their comprehensive business data API
 - The accessibility community for valuable feedback and guidance
 
-## 📞 Contact
 
-For questions or support, please [open an issue](https://github.com/yourusername/visionmate/issues) or contact us at support@visionmate.com.
 
----
-
-<p align="center">Made with ❤️ for accessibility</p>
-```
 
 
 
