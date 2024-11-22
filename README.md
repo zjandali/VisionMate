@@ -1,71 +1,112 @@
-# VisionMates
-visionmate/
-└── public/
-    ├── liverecommendation2.html
-    ├── css/
-    │   └── main.css
-    ├── images/
-    │   └── leftarrow.png
-    └── js/
-        ├── services/
-        │   └── speechRecognition.js
-        └── liveRecommendation.js
-        
-##Download Whisper from OpenAi
-You can download and install (or update to) the latest release of Whisper with the following command:
 
-    pip install -U openai-whisper
+# 🎯 VisionMate: AI-Powered Navigation Assistant
 
-Alternatively, the following command will pull and install the latest commit from this repository, along with its Python dependencies:
+VisionMate is an innovative web application designed to help individuals with visual impairments explore and navigate new places with confidence. Through natural conversation and real-time location awareness, VisionMate provides detailed descriptions of surroundings and helps users discover new destinations.
 
-    pip install git+https://github.com/openai/whisper.git 
+## 🎥 Demo Video
+<video width="600" height="400" controls>
+  <source src="VisionMate Final Video .mp4" type="video/mp4">
+</video>
 
-To update the package to the latest version of this repository, please run:
 
-    pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
+## ✨ Key Features
 
-It also requires the command-line tool [`ffmpeg`](https://ffmpeg.org/) to be installed on your system, which is available from most package managers:
+- **Natural Conversation Interface**: Engage in natural dialogue to discover new places and get recommendations
+- **Live Location Awareness**: Receive real-time descriptions of notable places as you walk by
+- **Voice-First Design**: Fully accessible through voice commands and screen readers
+- **Smart Recommendations**: Context-aware suggestions based on user preferences and location
+- **Voice Memo System**: Record and share location-specific hazards or points of interest
 
+## 🚀 Technologies Used
+
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Speech Recognition**: Web Speech API
+- **Location Services**: Geolocation API
+- **APIs**: 
+  - Yelp Fusion API for business data
+  - OpenAI Whisper for speech-to-text
+  - Custom LLM for natural language understanding
+
+## 🛠️ Installation
+
+1. **Clone the repository**
 ```bash
-# on Ubuntu or Debian
+git clone https://github.com/yourusername/visionmate.git
+cd visionmate
+```
+
+2. **Install dependencies**
+```bash
+npm install
+```
+
+3. **Install Whisper (Required for voice processing)**
+```bash
+pip install -U openai-whisper
+```
+
+4. **Install ffmpeg**
+For Ubuntu/Debian:
+```bash
 sudo apt update && sudo apt install ffmpeg
-
-# on Arch Linux
-sudo pacman -S ffmpeg
-
-# on MacOS using Homebrew (https://brew.sh/)
-brew install ffmpeg
-
-# on Windows using Chocolatey (https://chocolatey.org/)
-choco install ffmpeg
-
-# on Windows using Scoop (https://scoop.sh/)
-scoop install ffmpeg
 ```
+For other platforms, see the [ffmpeg installation guide](https://ffmpeg.org/download.html).
 
-You may need [`rust`](http://rust-lang.org) installed as well, in case [tiktoken](https://github.com/openai/tiktoken) does not provide a pre-built wheel for your platform. If you see installation errors during the `pip install` command above, please follow the [Getting started page](https://www.rust-lang.org/learn/get-started) to install Rust development environment. Additionally, you may need to configure the `PATH` environment variable, e.g. `export PATH="$HOME/.cargo/bin:$PATH"`. If the installation fails with `No module named 'setuptools_rust'`, you need to install `setuptools_rust`, e.g. by running:
-
+5. **Set up environment variables**
+Create a `.env` file in the root directory:
 ```bash
-pip install setuptools-rust
+YELP_API_KEY=your_yelp_api_key
+OPENAI_API_KEY=your_openai_api_key
 ```
 
-##Set up the Server 
-Now you need to download node.js. Download it from [Node.js](nodejs.org).
-Run:
-'''
-npm init -y
-npm install express multer
-node server.js
-go to: http://localhost:3000/
+6. **Start the server**
+```bash
+npm start
+```
 
-'''
-## To set up remote server
-Download ngrok from [ngrok](https://ngrok.com/download)
-Now run: 
-'''
-choco install ngrok
-ngrok config add-authtoken TOKEN
-ngrok http http://localhost:3000
+Visit `http://localhost:3000` in your browser.
+
+## 📱 Remote Access Setup
+
+To make VisionMate accessible from other devices:
+
+1. Install ngrok:
+```bash
+npm install -g ngrok
+```
+
+2. Create a tunnel:
+```bash
+ngrok http 3000
+```
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+## 🎯 Future Roadmap
+
+- [ ] Offline mode support
+- [ ] Multi-language support
+- [ ] Community-driven hazard reporting system
+- [ ] Integration with public transit APIs
+- [ ] Customizable voice profiles
 
 
-'''
+## 🙏 Acknowledgments
+
+- OpenAI for Whisper speech recognition
+- Yelp for their comprehensive business data API
+- The accessibility community for valuable feedback and guidance
+
+## 📞 Contact
+
+For questions or support, please [open an issue](https://github.com/yourusername/visionmate/issues) or contact us at support@visionmate.com.
+
+---
+
+<p align="center">Made with ❤️ for accessibility</p>
+```
+
+
+
