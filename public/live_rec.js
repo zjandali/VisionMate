@@ -30,6 +30,7 @@ async function identifyIntentFirst(userInput) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                #dead api key
                 Authorization: 'Bearer rg_v1_ikqio64in5964woesbbzllecm42kyxvyz1ry_ngk',
             },
             body: JSON.stringify({
