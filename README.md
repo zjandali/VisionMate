@@ -1,7 +1,7 @@
 
 # 🎯 VisionMate: AI-Powered Navigation Assistant
 
-VisionMate is an innovative web application designed to help individuals with visual impairments explore and navigate new places with confidence. Through natural conversation and real-time location awareness, VisionMate provides detailed descriptions of surroundings and helps users discover new destinations.
+VisionMate is an innovative screen-reader friendly web application designed to help individuals with visual impairments explore and navigate new places with confidence. Through natural conversation and real-time location awareness, VisionMate provides detailed descriptions of surroundings and helps users discover new destinations.
 
 
 ## ✨ Key Features
